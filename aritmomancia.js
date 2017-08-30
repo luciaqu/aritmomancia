@@ -1,13 +1,13 @@
 
 var amor = 0 ;
 var social= 0;
-var nombre = ["s","o","f","i","a","g","u","t","i","e","r","r","e","z"];
-var caracter= 0;
+var nombre = process.argv.slice(2); //Así me deja usar la consola siempre y cuando escriba el nombre letra por letra con espacio.
+var caracter = 0;
 var letrasArray = [];
 var letraAmor = [];
 var letraSocial = [];
 
-	
+
 function leer (){ 
 	for(var i=0; i < nombre.length; i++){
 		if (nombre[i] == "a"|| nombre[i] == "j" || nombre[i] == "s"){
