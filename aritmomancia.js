@@ -7,24 +7,25 @@ var letrasArray = [];
 var letraAmor = [];
 var letraSocial = [];
 
+console.log(nombre);
+function leer (){
 
-function leer (){ 
 	for(var i=0; i < nombre.length; i++){
-		if (nombre[i] == "a"|| nombre[i] == "j" || nombre[i] == "s"){
-			caracter+=1;
-			letrasArray+= nombre[i];
-			if(nombre[i]=="a"){
-				amor+=1;
-				letraAmor+= nombre[i];
+		if (nombre[i] == "a"|| nombre[i] == "j" || nombre[i] == "s"){//compara con las primeras 3 letras
+			caracter+=1; //suma si es verdadero
+			letrasArray+= nombre[i]; //agrega la letra al array de todas las letras
+			if(nombre[i]=="a"){ //pregunta si es la vocal
+				amor+=1; //suma la vocal
+				letraAmor+= nombre[i]; // agrega la vocal al array de vocales (para verificar nomás)
 			} else {
-				social+=1;
-				letraSocial+= nombre[i];
+				social+=1; //como no es vocal suma el valor de la consonante 
+				letraSocial+= nombre[i]; //agrega la consonante al array de consonantes (para verificar nomás)
 			}
 
 		} else if (nombre[i] == "b" || nombre[i] == "k" || nombre[i] == "t"){
 			caracter+=2;
 			letrasArray+= nombre[i];
-			social+=2;
+			social+=2; //en esta sección no hay vocales, suma las consonantes sí o sí.
 			letraSocial+= nombre[i];
 
 		} else if (nombre[i] == "c" || nombre[i] == "l" || nombre[i] == "u"){
