@@ -1,8 +1,11 @@
-var numero = 9999;
+var numero = 857;
 var milenials = 0;
 var centenas = 0;
 var decenas = 0;
 var unidades = 0;
+var sumaDec = 0;
+var doscifras = 0;
+var numeroFinal = 0;
 
 if (numero>999){
 	do{	
@@ -38,29 +41,17 @@ console.log(numeroUno+"numeroUno");
 
 
 if (numeroUno < 10){
-	console.log(numeroUno +"final");
+	numeroFinal = numeroUno;
+	console.log(numeroFinal +"final menor que 10");
 } else if(numeroUno > 10){
-	numeroUno-=10;
-	
-	}
-}
-/*if (numeroUno>9){
-	function achicarDe(dec) {
-		var masuno = 0;
-		if(dec>9){			
-			do{
-				dec-=10;
-				masuno++;
-			} while (dec > 9);
-		console.log(masuno+"masuno");
-		return masuno;
+		doscifras = numeroUno;
+		while(doscifras > 9){
+			doscifras-=10;
+			console.log(doscifras+"nroUno dentro del while")
+			sumaDec++;
+			console.log(sumaDec+"sumaDec");
 		}
 
-		if(dec<=9){
-			console.log(dec+"dec");
-		}
-	}
+		numeroFinal = doscifras+sumaDec;
+		console.log(numeroFinal+"final mayor que 10");
 }
-numeroUno = achicarDe(numeroUno);
-console.log(numeroUno);
-console.log(numeroUno+);*/
