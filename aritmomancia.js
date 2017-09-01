@@ -1,14 +1,15 @@
-var amor = 0 ;
+var amor = 0;
 var social= 0;
 var nombre = process.argv.slice(2); //Así me deja usar la consola siempre y cuando escriba el nombre letra por letra con espacio.
 var caracter = 0;
 var letrasArray = [];
 var letraAmor = [];
 var letraSocial = [];
+var numeroFinal = 0;
 
 console.log(nombre);
-function leer (){
 
+function leer (){
 	for(var i=0; i < nombre.length; i++){
 		if (nombre[i] == "a"|| nombre[i] == "j" || nombre[i] == "s"){//compara con las primeras 3 letras
 			caracter+=1; //suma si es verdadero
@@ -88,9 +89,9 @@ function leer (){
 			}
 		}
 	}
-	console.log("caracter suma completa="+ caracter+ " letrasArray= "+letrasArray);
-	console.log("amor suma completa="+ amor+ " letras= " + letraAmor);
-	console.log("social suma completa="+ social+ " letras= "+ letraSocial);
+	//console.log("caracter suma completa="+ caracter+ " letrasArray= "+letrasArray);
+	//console.log("amor suma completa="+ amor+ " letras= " + letraAmor);
+	//console.log("social suma completa="+ social+ " letras= "+ letraSocial);
 
 }
 function achicar(numero){
@@ -100,7 +101,6 @@ function achicar(numero){
 	var unidades = 0;
 	var sumaDec = 0;
 	var doscifras = 0;
-	var numeroFinal = 0;
 
 	if (numero>999){
 		do{	
@@ -130,9 +130,9 @@ function achicar(numero){
 		 	//console.log(unidades+"unidades");
 		} while (numero > 0);
 	}
-	console.log(milenials,centenas,decenas,unidades);
+//	console.log(milenials,centenas,decenas,unidades);
 	var numeroUno= milenials+centenas+decenas+unidades;
-	console.log(numeroUno+"numeroUno= suma de todos los resultados");
+	//console.log(numeroUno+"numeroUno= suma de todos los resultados");
 
 
 	if (numeroUno < 10){
@@ -143,9 +143,9 @@ function achicar(numero){
 			doscifras = numeroUno;
 			while(doscifras > 9){
 				doscifras-=10;
-				console.log(doscifras+"nroUno dentro del while")
+				//console.log(doscifras+"nroUno dentro del while")
 				sumaDec++;
-				console.log(sumaDec+"sumaDec");
+				//console.log(sumaDec+"sumaDec");
 			}
 
 			numeroFinal = doscifras+sumaDec;
@@ -154,11 +154,45 @@ function achicar(numero){
 	}
 }
 
+function definicion(numeroF){
+	if (numeroF == 1){
+		console.log("Uno: Es el número del individuo. Los Unos son independientes, de ideas claras, audaces y decididos. Se fijan una meta y van a por ella. Son líderes e inventores. A los Unos les cuesta trabajar en equipo y no les gusta recibir órdenes. Pueden ser egocéntricos, egoístas y dominantes. Suelen ser solitarios.");
+	} else if (numeroF == 2){
+		console.log("Dos: El dos representa la interacción, la comunicación en dos direcciones, la cooperación y el equilibrio. Los Doses son imaginativos, creativos y amables. Sus características son la paz, la armonía, el compromiso, la lealtad y el sentido de la justicia. Pero el dos también introduce la idea de conflicto, de fuerzas opuestas, y de facetas en contraposición: el día y la noche, lo bueno y lo malo. Los Doces pueden ser retraídos, volubles, tímidos e indecisos.");
+	} else if (numeroF == 3){
+		console.log("Tres: El tres representa la idea de la plenitud o totalidad, como en los tríos de pasado/presente/futuro y mente/cuerpo/espíritu. Los pitagóricos consideraban al tres el primer número <<completo>>, ya que, igual que tres guijarros puestos en fila, posee un comienzo, un medio y un final. El tres indica talento, energía, natural artístico, sentido del humor y facilidad para el trato social. Los Treses suelen ser gente con suerte, de trato fácil, ricos y con mucho éxito, pero también pueden ser personas dispersas, que se ofenden con facilidad y superficiales.");
+	} else if (numeroF == 4){
+	console.log("Cuatro: Como una mesa que reposa firmemente sobre sus cuatro patas, el cuatro indica estabilidad y firmeza. Los Cuatros disfrutan con el trabajo duro. Son prácticos, fiables y con los pies en el suelo; prefieren la lógica y la razón a os vuelos de la fantasía. Son buenos organizadores y consiguen que las cosas se hagan. Como el ciclo de las estaciones, también resultan predecibles. Pueden ser tozudos, recelosos, excesivamente prácticos y con tendencia a tener arrebatos de mal genio. Cualquier conflicto posible con los Doses se duplica en los Cuatros.");
+	} else if (numeroF == 5){
+	console.log("Cinco: El cinco es el número de la inestabilidad y el desequilibrio. Indica cambio e incertidumbre. Los Cincos se sienten atraídos por muchas cosas a la vez, pero no se centrar en ninguna. Son aventureros, están llenos de energía y siempre dispuestos a arriesgarse. Les encanta viajar y conocer gente nueva, pero puede que no permanezcan mucho tiempo en un mismo lugar. Los Cincos pueden ser engreídos, irresponsables, irascibles e impacientes.");
+	} else if (numeroF == 6){
+	console.log("Seis: El seis representa la armonía, la amistad y la vida familiar. Los Seises son leales, fiables y amorosos. Tienen facilidad para adaptarse. Se les dan muy bien la enseñanza y las artes, mientras que los negocios no suelen ser lo suyo. A veces tienen tendencia al chismorreo y a la complacencia. Los pitagóricos consideraban el seis el número perfecto, ya que es divisible tanto por dos como por tres y contiene la suma y el producto de los tres primeros dígitos (1 + 2 +3 = 6, 1 x 2 x 3 = 6).");
+	} else if (numeroF == 7){
+		console.log("Siete: Perceptivos, comprensivos y brillantes, a los Sietes les gusta el trabajo duro y los retos. Suelen ser serios, estudiosos y les interesan todas las cosas misteriosas. Para ellos, la originalidad y la imaginación son más importantes que el dinero y las posesiones materiales. Los Sietes pueden ser también pesimistas, sarcásticos e inseguros. El siete se considera a veces un número místico o mágico, debido a que se asocia con los bíblicos siete días de la Creación, y con los siete cuerpos celestes de la antigua astronomía (el Sol, la Luna, Mercurio, Venus, Marte, Saturno y Júpiter).");
+	} else if (numeroF == 8){
+		console.log("Ocho: El ocho indica la posibilidad de gran éxito en los negocios, las finanzas y la política. Los Ochos son prácticos, ambiciosos, comprometidos y trabajadores. Pero también pueden ser celosos, codiciosos, dominantes y sedientos de poder. Se dice que el ocho es el número más imprescindible de todos, y pueden indicar tanto el éxito máximo como el fracaso más rotundo; ambas posibilidades están presentes desde el principio.");
+	} else if (numeroF == 9){
+		console.log("Nueve: Representa totalidad y logro en el grado más alto, ya que es el número <<completo>> (el tres) expresado tres veces (3 x 3 = 9). Los Nueves dedican su vida al servicio al prójimo, a menudo como maestros, científicos y humanistas. De fuertes convicciones, trabajan incansablemente y sirven de inspiración para los demás. Sin embargo, también pueden ser arrogantes y engreídos cuando las cosas no salen como ellos esperan.");
+	}
+}
+
 leer(nombre);
-achicar(caracter);
+
 console.log("caracter");
-achicar(amor);
+achicar(caracter);
+definicion(numeroFinal);
+console.log(" ");
+
 console.log("amor");
-achicar(social);
+achicar(amor);
+definicion(numeroFinal);
+console.log(" ");
+
 console.log("social");
+achicar(social);
+definicion(numeroFinal);
+
+/*var caracterFinal = achicar(caracter); 
+var amorFinal = achicar(amor);
+var socialFinal = achicar(social);*/
 
